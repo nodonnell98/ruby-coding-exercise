@@ -5,6 +5,7 @@
     <p><strong>Description:</strong> <%= @product.description %></p>
     <p><strong>Price:</strong> <%= number_to_currency(@product.price, unit: "£") %></p>
     
+    <%= button_to 'Add to Cart', add_to_cart_path(product_id: @product.id), method: :post, class: 'btn btn-primary' %>
     <%= link_to 'Back to Products', products_path, class: 'btn btn-secondary' %>
   </div>
 </div>
