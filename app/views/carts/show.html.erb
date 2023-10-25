@@ -6,5 +6,6 @@
     <% end %>
 
     <h3>Total: <%= number_to_currency(@cart.cart_items.sum { |item| item.quantity * item.product.price }) %></h3>
+    <%= link_to 'Checkout', checkout_path(cart_id: @cart.id), id: 'checkout-button', class: 'btn btn-primary' %>
   </div>
 </div>

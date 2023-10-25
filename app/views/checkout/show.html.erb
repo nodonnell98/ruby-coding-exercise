@@ -1,0 +1,23 @@
+<div class="product-show">
+<div class="product-show-container">
+<h2>Checkout</h2>
+<%= form_with url: '/complete_purchase', method: :post do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control', required: true %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.label :address %>
+    <%= f.text_field :address, class: 'form-control', required: true %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.label :credit_card, 'Credit Card Number' %>
+    <%= f.text_field :credit_card, class: 'form-control', required: true %>
+  </div>
+  
+  <%= f.submit 'Complete Purchase', class: 'btn btn-primary' %>
+<% end %>
+</div>
+</div>
